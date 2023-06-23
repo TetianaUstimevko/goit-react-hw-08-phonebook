@@ -53,3 +53,38 @@ const App = () => {
 };
 
 export default App;
+
+// import React from 'react';
+// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+// import RegisterForm from './RegisterForm';
+// import LoginForm from './LoginForm';
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <div>
+//         <nav>
+//           <ul>
+//             <li>
+//               <Link to="/register">Register</Link>
+//             </li>
+//             <li>
+//               <Link to="/login">Login</Link>
+//             </li>
+//           </ul>
+//         </nav>
+
+//         <Switch>
+//           <Route path="/register">
+//             <RegisterForm />
+//           </Route>
+//           <Route path="/login">
+//             <LoginForm />
+//           </Route>
+//         </Switch>
+//       </div>
+//     </Router>
+//   );
+// };
+
+// export default App;
