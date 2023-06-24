@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 import { nanoid } from 'nanoid';
-import s from './ContactForm.module.css';
+import { ContactFormStyle, ContactFormLabel, ContactFormInput, ContactFormButton } from './ContactForm.styled';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -31,34 +31,32 @@ const ContactForm = () => {
   };
 
   return (
-    <form className={s.form} onSubmit={handleSubmit}>
-      <label>
+    <ContactFormStyle onSubmit={handleSubmit}>
+      <ContactFormLabel>
         Name
-        <input
-          className={s.inputName}
+        <ContactFormInput
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
           name="name"
           required
         />
-      </label>
-      <label>
+      </ContactFormLabel>
+      <ContactFormLabel>
         Number
-        <input
-          className={s.inputNumber}
+        <ContactFormInput
           value={number}
           onChange={(e) => setNumber(e.target.value)}
           type="tel"
           name="number"
           required
         />
-      </label>
+      </ContactFormLabel>
 
-      <button type="submit" className={s.buttonEditor}>
+      <ContactFormButton type="submit">
         Add contact
-      </button>
-    </form>
+      </ContactFormButton>
+    </ContactFormStyle>
   );
 };
 

@@ -1,4 +1,6 @@
-/* .form {
+import styled from '@emotion/styled';
+
+export const ContactFormStyle = styled.form`
   background-color: rgb(173, 223, 219);
   display: flex;
   justify-content: center;
@@ -9,43 +11,31 @@
   border: #202020;
   box-shadow: rgb(139, 167, 147) -1px -1px 15px,
     rgb(255, 255, 255) 15px 15px 35px;
-}
+`;
 
-label {
+export const ContactFormLabel = styled.label`
   margin-bottom: 10px;
   color: rgb(6, 58, 54);
   text-shadow: rgb(255, 255, 255) 0px 1px 1px;
-}
+  &:last-child {
+    margin-bottom: 0px;
+  }
+`;
 
-label:last-child {
-  margin-bottom: 0px;
-}
-
-.inputName {
+export const ContactFormInput = styled.input`
   padding: 8px 16px;
   margin-left: 28px;
   border-radius: 8px;
   background-color: rgb(247, 255, 250);
   box-shadow: rgb(139, 167, 147) 1px 1px 3px inset,
     rgb(255, 255, 255) -1px -1px 5px inset;
+  /* font-style: italic; */
   text-shadow: rgb(255, 255, 255) 0px 1px 1px;
   border: 0px;
   outline: 0px;
-}
+`;
 
-.inputNumber {
-  padding: 8px 16px;
-  margin-left: 10px;
-  border-radius: 8px;
-  background-color: rgb(247, 255, 250);
-  box-shadow: rgb(139, 167, 147) 1px 1px 3px inset,
-    rgb(255, 255, 255) -1px -1px 5px inset;
-  text-shadow: rgb(255, 255, 255) 0px 1px 1px;
-  border: 0px;
-  outline: 0px;
-}
-
-.buttonEditor {
+export const ContactFormButton = styled.button`
   padding: 8px 16px;
   border: none;
   outline: none;
@@ -55,8 +45,4 @@ label:last-child {
   background-color: rgb(25, 138, 138);
   color: rgb(255, 255, 255);
   cursor: pointer;
-}
-
-.buttonEditor:hover {
-  box-shadow: none;
-} */
+`;
