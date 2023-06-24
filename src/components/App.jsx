@@ -1,90 +1,68 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import ContactList from './ContactList/ContactList';
-import ContactForm from './ContactForm/ContactForm';
-import Filter from './Filter/Filter';
-import Notification from './Notification/Notification';
-import { fetchContacts } from 'redux/operations';
-import s from './App.module.css';
-import { selectContacts, selectLoading, selectError } from 'redux/selectors';
+import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchCurrentUser } from 'redux/auth/auth-operations';
+import RestrictedRoute from './RestrictedRoute';
+import PrivateRoute from './PrivateRoute';
+import useAuth from './hooks/UseAuth';
+import { Container } from './App.styled';
 
-const App = () => {
+const Home = lazy(() => import('pages/Home'));
+const Registration = lazy(() => import('pages/Registration'));
+const Contacts = lazy(() => import('pages/Contacts'));
+const Login = lazy(() => import('pages/Login'));
+
+function App() {
   const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
-  const loading = useSelector(selectLoading);
-  const error = useSelector(selectError);
-
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(fetchCurrentUser());
   }, [dispatch]);
 
+  const { isRefreshing } = useAuth();
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        fontSize: 18,
-        color: '#010101',
-      }}
-    >
-      <h1>Phonebook</h1>
-      <ContactForm />
+    !isRefreshing && (
+      <Container maxW="2lg" centerContent>
+        
+          <Routes>
+           
+              <Route index element={<Home />} />
 
-      <h2 className={s.titleContacts}>Contacts</h2>
-      <div className={s.allContacts}>All contacts: {contacts.length}</div>
+              <Route
+                path="/register"
+                element={
+                  <RestrictedRoute
+                    component={<Registration />}
+                    redirectTo="/contacts"
+                  />
+                }
+              />
 
-      {loading ? (
-         <Notification message="Loading contacts..." />
-      ) : error ? (
-        <Notification message="Error loading contacts. Please try again." />
-      ) : contacts.length > 0 ? (
-        <>
-          <Filter />
-          <ContactList />
-        </>
-      ) : (
-        <Notification message="Contact list is empty" />
-      )}
-    </div>
+              <Route
+                path="/login"
+                element={
+                  <RestrictedRoute
+                    component={<Login />}
+                    redirectTo="/contacts"
+                  />
+                }
+              />
+
+              <Route
+                path="/contacts"
+                element={
+                  <PrivateRoute component={<Contacts />} redirectTo="/login" />
+                }
+              />
+
+              <Route path="*" element={<Home />} />
+           
+          </Routes>
+        
+      </Container>
+    )
   );
-};
+}
 
 export default App;
-
-// import React from 'react';
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-// import RegisterForm from './RegisterForm';
-// import LoginForm from './LoginForm';
-
-// const App = () => {
-//   return (
-//     <Router>
-//       <div>
-//         <nav>
-//           <ul>
-//             <li>
-//               <Link to="/register">Register</Link>
-//             </li>
-//             <li>
-//               <Link to="/login">Login</Link>
-//             </li>
-//           </ul>
-//         </nav>
-
-//         <Switch>
-//           <Route path="/register">
-//             <RegisterForm />
-//           </Route>
-//           <Route path="/login">
-//             <LoginForm />
-//           </Route>
-//         </Switch>
-//       </div>
-//     </Router>
-//   );
-// };
-
-// export default App;
