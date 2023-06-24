@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import ContactItem from 'components/ContactItem/ContactItem';
 import { selectContacts, selectFilter } from 'redux/selectors';
+import { ContactListStyle } from './ContactList.styled';
 
 const ContactList = () => {
 
@@ -13,7 +14,7 @@ const ContactList = () => {
   );
 
   return (
-    <ul>
+    <ContactListStyle>
       {filterContacts.map((contact) => (
         <ContactItem
           name={contact.name}
@@ -23,7 +24,7 @@ const ContactList = () => {
         
         />
       ))}
-    </ul>
+    </ContactListStyle>
   );
 };
 

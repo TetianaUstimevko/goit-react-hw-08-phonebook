@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/operations';
-import s from './ContactItem.module.css';
+import { ContactItemList, ContactItemText, ContactItemButton } from './ContactItem.styled';
 import PropTypes from 'prop-types';
 
 const ContactItem = ({ id, name, number }) => {
@@ -12,15 +12,15 @@ const ContactItem = ({ id, name, number }) => {
   };
 
   return (
-    <li className={s.item}>
-      <p className={s.contact}>
+    <ContactItemList>
+      <ContactItemText>
         {name}............
         {number}
-      </p>
-      <button className={s.btn} type="button" onClick={handleDelete}>
+      </ContactItemText>
+      <ContactItemButton type="button" onClick={handleDelete}>
         Delete
-      </button>
-    </li>
+      </ContactItemButton>
+    </ContactItemList>
   );
 };
 
