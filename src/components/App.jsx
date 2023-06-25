@@ -7,6 +7,7 @@ import RestrictedRoute from './RestrictedRoute';
 import PrivateRoute from './PrivateRoute';
 import useAuth from './hooks/UseAuth';
 import { Container } from './App.styled';
+import { Layout } from './Layout';
 
 const Home = lazy(() => import('pages/Home'));
 const Registration = lazy(() => import('pages/Registration'));
@@ -24,42 +25,37 @@ function App() {
   return (
     !isRefreshing && (
       <Container>
-        
-          <Routes>
-           
-              <Route index element={<Home />} />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
 
-              <Route
-                path="/register"
-                element={
-                  <RestrictedRoute
-                    component={<Registration />}
-                    redirectTo="/contacts"
-                  />
-                }
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                component={<Registration />}
+                redirectTo="/contacts"
               />
+            }
+          />
 
-              <Route
-                path="/login"
-                element={
-                  <RestrictedRoute
-                    component={<Login />}
-                    redirectTo="/contacts"
-                  />
-                }
-              />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute component={<Login />} redirectTo="/contacts" />
+            }
+          />
 
-              <Route
-                path="/contacts"
-                element={
-                  <PrivateRoute component={<Contacts />} redirectTo="/login" />
-                }
-              />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute component={<Contacts />} redirectTo="/login" />
+            }
+          />
 
-              <Route path="*" element={<Home />} />
-           
-          </Routes>
-        
+            <Route path="*" element={<Home />} />
+            </Route>
+        </Routes>
       </Container>
     )
   );
