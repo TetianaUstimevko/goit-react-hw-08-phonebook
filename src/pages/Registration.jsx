@@ -32,9 +32,10 @@ export default function RegistrationForm() {
 
   return (
     <ContainerStyle>
-      <TitleForm>Page of registration</TitleForm>
+      <TitleForm>Registration</TitleForm>
 
       <RegisterForm onSubmit={handleSubmit} autoComplete="off">
+       
         <LabelForm>Name</LabelForm>
         <InputForm
           type="text"
@@ -62,7 +63,8 @@ export default function RegistrationForm() {
           autoComplete="off"
         />
 
-        <ButtonForm type="submit">Register</ButtonForm>
+          <ButtonForm type="submit">Register</ButtonForm>
+          
       </RegisterForm>
     </ContainerStyle>
   );

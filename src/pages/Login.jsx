@@ -29,7 +29,7 @@ export default function Login() {
 
   return (
     <ContainerStyle>
-      <TitleForm>Page of LogIn</TitleForm>
+      <TitleForm>Login</TitleForm>
 
       <RegisterForm onSubmit={handleSubmit} autoComplete="off">
         <LabelForm>

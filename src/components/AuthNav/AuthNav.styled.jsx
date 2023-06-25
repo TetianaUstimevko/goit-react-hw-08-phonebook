@@ -8,6 +8,8 @@ export const AuthNavList = styled.ul`
 `;
 
 export const NavLinkStyled = styled(NavLink)`
+  color: #030f0d;
+  text-decoration: none;
   padding: 10px;
   display: inline-block;
   font-size: 24px;
@@ -19,7 +21,7 @@ export const NavLinkStyled = styled(NavLink)`
   }
   &.active,
   &:hover {
-    color: #f0d9a1;
+    color: #162ba3;
     border-bottom: 3px solid;
   }
 `;
