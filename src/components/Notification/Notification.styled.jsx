@@ -1,4 +1,6 @@
-/* .title {
+import styled from '@emotion/styled';
+
+export const NotificationTitle = styled.p`
   background-color: rgb(173, 223, 219);
   border: 1px solid #000;
   padding: 20px 60px;
@@ -13,4 +15,4 @@
   text-align: center;
   box-shadow: rgb(139, 167, 147) -1px -1px 15px,
     rgb(255, 255, 255) 15px 15px 35px;
-} */
+`;

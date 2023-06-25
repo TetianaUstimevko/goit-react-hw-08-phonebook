@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './Notification.module.css';
+import { NotificationTitle } from './Notification.styled';
 
 const Notification = ({message}) => {
 
-  return <p className={s.title}>{message}</p>;
+  return <NotificationTitle>{message}</NotificationTitle>;
 };
 
 Notification.propTypes = {
