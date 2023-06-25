@@ -1,9 +1,15 @@
-import { Titleh1 } from "./pages.styled";
+import phonebookmain from '../img/phonebookmain.jpg';
+import { HomeContainer, HomeImgBox, HomeTextBox, HomeText, HomeImg } from './pages.styled';
 
 export default function Home() {
-    return (
-        <Titleh1>
-            Phonebook
-        </Titleh1>
-    );
+  return (
+    <HomeContainer>
+      <HomeImgBox>
+        <HomeImg src={phonebookmain} alt="" />
+      </HomeImgBox>
+      <HomeTextBox>
+        <HomeText>Welcome to the Phonebook app!</HomeText>
+      </HomeTextBox>
+    </HomeContainer>
+  );
 }

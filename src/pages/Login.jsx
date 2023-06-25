@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/auth-operations';
-import { ContainerStyle, TitleForm, RegisterForm, LabelForm, InputForm, ButtonForm } from './pages.styled';
+import { ContainerStyle, TitleForm, RegisterForm, LabelForm, InputForm, ButtonForm, Box } from './pages.styled';
+import phonebooklog from '../img/phonebooklog.jpg'
 
 export default function Login() {
 
@@ -28,14 +29,14 @@ export default function Login() {
   };
 
   return (
+    <Box>
     <ContainerStyle>
       <TitleForm>Login</TitleForm>
 
       <RegisterForm onSubmit={handleSubmit} autoComplete="off">
         <LabelForm>
           Email
-        </LabelForm>
-        <InputForm
+          <InputForm
           label="Email"
           helperText="Please enter your email"
           focused
@@ -44,11 +45,12 @@ export default function Login() {
           value={email}
           onChange={handleChange}
         />
+        </LabelForm>
+        
 
         <LabelForm>
           Password
-        </LabelForm>
-        <InputForm
+          <InputForm
           label="Password"
           focused
           helperText="Please enter your password"
@@ -57,11 +59,15 @@ export default function Login() {
           value={password}
           onChange={handleChange}
         />
+        </LabelForm>
+        
 
         <ButtonForm type='summit'>
           LogIn
         </ButtonForm>
       </RegisterForm>
-    </ContainerStyle>
+      </ContainerStyle>
+      <img src={phonebooklog} alt='' />
+      </Box>
   );
 }

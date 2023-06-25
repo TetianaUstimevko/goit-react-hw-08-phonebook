@@ -26,6 +26,27 @@ export const NavLinkStyled = styled(NavLink)`
   }
 `;
 
-export const AuthNavContainer = styled.div`
-  
+export const NavLinkStyledh2 = styled(NavLink)`
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 2px solid #162ba3;
+  background-color:  #c3eee5;
+  transition: color 0.2s ease-in-out;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  &.active,
+  &:hover {
+    color: #162ba3;
+    background-color: white;
+    border-radius: 5px;
+    border: white;
+  }
 `;
+
+export const AuthNavContainer = styled.div``;
