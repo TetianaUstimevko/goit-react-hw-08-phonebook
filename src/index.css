@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  background-color: #c3eee5;
+  background-color: #c0f0e4;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -25,4 +25,12 @@ input {
 
 button:hover {
   box-shadow: #2e61ec;
+}
+
+p {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }

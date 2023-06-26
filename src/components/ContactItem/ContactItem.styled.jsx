@@ -1,6 +1,13 @@
 import styled from '@emotion/styled';
 
+// export const ContactItemContainer = styled.div`
+//   max-width: 300px;
+//   margin-left: 475px;
+//   display: flex;
+// `;
+
 export const ContactItemList = styled.li`
+  
   background-color: #fff;
   border: 1px solid #000;
   padding: 10px;
@@ -14,8 +21,11 @@ export const ContactItemList = styled.li`
   outline: 0px;
 `;
 
+
+
 export const ContactItemText = styled.p`
-  margin-right: 30px;
+  
+  
 `;
 
 export const ContactItemButton = styled.button`
@@ -27,4 +37,6 @@ export const ContactItemButton = styled.button`
   background-color: rgb(25, 138, 138);
   color: rgb(255, 255, 255);
   cursor: pointer;
+  &:hover {
+  box-shadow: none;
 `;

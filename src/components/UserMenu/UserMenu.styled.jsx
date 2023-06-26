@@ -12,15 +12,15 @@ export const UserText = styled.p`
 
 export const UserButton = styled.p`
   margin-top: 10px;
-  background-color: #c3eee5;
-  border: none;
-  padding: 5px 0;
-  border-radius: 5px;
-  width: 100px;
+  padding: 5px 10px;
+ border: none;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 5px 0px;
+  transition: all 0.2s ease-in-out 0s;
+  background-color: rgb(25, 138, 138);
+  color: rgb(255, 255, 255);
   cursor: pointer;
-  &:hover,
-  &:focus,
-  &:focus-visible {
-    background-color: #eff5f4;
-  }
+  &:hover {
+  box-shadow: none;
 `;

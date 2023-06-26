@@ -12,15 +12,19 @@ const ContactItem = ({ id, name, number }) => {
   };
 
   return (
+    
     <ContactItemList>
       <ContactItemText>
-        {name}............
+        {name}
+      </ContactItemText>
+      <ContactItemText>
         {number}
       </ContactItemText>
       <ContactItemButton type="button" onClick={handleDelete}>
         Delete
       </ContactItemButton>
-    </ContactItemList>
+      </ContactItemList>
+     
   );
 };
 

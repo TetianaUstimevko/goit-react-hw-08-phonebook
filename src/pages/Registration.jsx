@@ -54,6 +54,7 @@ export default function RegistrationForm() {
               value={name}
               onChange={handleChange}
               autoComplete="off"
+              
             />
           </LabelForm>
 
@@ -65,6 +66,7 @@ export default function RegistrationForm() {
               value={email}
               onChange={handleChange}
               autoComplete=""
+              
             />
           </LabelForm>
 
@@ -76,6 +78,7 @@ export default function RegistrationForm() {
               value={password}
               onChange={handleChange}
               autoComplete="off"
+              
             />
           </LabelForm>
 

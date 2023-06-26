@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const Box = styled.div`
   width: 550px;
   height: 500px;
-
+margin-top: 36px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -32,6 +32,8 @@ export const Titleh2 = styled.h2`
 
 export const TitleForm = styled.h1`
   text-transform: uppercase;
+  color: rgb(6, 58, 54);
+  text-shadow: rgb(255, 255, 255) 0px 1px 1px;
 `;
 
 export const RegisterForm = styled.form`
@@ -58,6 +60,10 @@ export const InputForm = styled.input`
   border: none;
   background: rgba(0, 0, 0, 0.09);
   border-radius: 24px;
+  box-shadow: rgb(139, 167, 147) 1px 1px 3px inset,
+    rgb(255, 255, 255) -1px -1px 5px inset;
+ 
+  
 `;
 
 export const ButtonForm = styled.button`
@@ -65,15 +71,17 @@ export const ButtonForm = styled.button`
   height: 30px;
   margin-left: 30%;
   margin-bottom: 16px;
-  color: rba(0, 204, 255);
-  background-color: #2e61ec;
+  
   border: none;
   border-radius: 24px;
+  
+  box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 5px 0px;
+  transition: all 0.2s ease-in-out 0s;
+  background-color: rgb(25, 138, 138);
+  color: rgb(255, 255, 255);
   cursor: pointer;
-  &:hover {
-    background-color: white;
-    border: none;
-  }
+  &:hover, &:focus {
+  box-shadow: none;
 `;
 
 export const RegisterText = styled.p`
@@ -117,7 +125,8 @@ export const HomeTextBox = styled.div`
 `;
 
 export const HomeText = styled.h1`
-  color: #2e61ec;
+  color: rgb(6, 58, 54);
+  text-shadow: rgb(255, 255, 255) 0px 1px 1px;
   text-align: center;
   width: 350px;
   height: 650px;

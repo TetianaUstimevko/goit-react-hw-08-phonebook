@@ -1,9 +1,12 @@
 import styled from '@emotion/styled';
 
 export const ContactFormStyle = styled.form`
+  max-width: 300px;
+  margin-left: 475px;
   background-color: rgb(173, 223, 219);
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   border: 1px solid #000;
   padding: 20px;
@@ -36,6 +39,7 @@ export const ContactFormInput = styled.input`
 `;
 
 export const ContactFormButton = styled.button`
+  width: 250px;
   padding: 8px 16px;
   border: none;
   outline: none;
@@ -45,4 +49,6 @@ export const ContactFormButton = styled.button`
   background-color: rgb(25, 138, 138);
   color: rgb(255, 255, 255);
   cursor: pointer;
+  &:hover {
+  box-shadow: none;
 `;

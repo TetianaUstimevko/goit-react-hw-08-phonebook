@@ -16,7 +16,7 @@ export default function Contacts() {
     }, [dispatch]);
     return (
         <ContainerStyle>
-            <Titleh1>Phonebook</Titleh1>
+            <Titleh1>My Phonebook</Titleh1>
             <ContactForm />
             {Loading && <p>Loading...</p>}
             <Titleh2>Contacts</Titleh2>

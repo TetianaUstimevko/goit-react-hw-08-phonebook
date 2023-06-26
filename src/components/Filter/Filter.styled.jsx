@@ -9,9 +9,8 @@ export const FilterLabel = styled.label`
   text-shadow: rgb(255, 255, 255) 0px 1px 1px;
 `;
 
-
 export const FilterInput = styled.input`
-    margin-left: 20px;
+  margin-left: 20px;
   padding: 8px 16px;
   margin-left: 10px;
   border-radius: 8px;

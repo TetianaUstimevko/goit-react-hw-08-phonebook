@@ -38,7 +38,6 @@ export default function Login() {
           Email
           <InputForm
           label="Email"
-          helperText="Please enter your email"
           focused
           type="email"
           name="email"
@@ -53,7 +52,6 @@ export default function Login() {
           <InputForm
           label="Password"
           focused
-          helperText="Please enter your password"
           type="password"
           name="password"
           value={password}

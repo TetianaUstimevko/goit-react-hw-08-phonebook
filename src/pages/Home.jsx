@@ -8,7 +8,7 @@ export default function Home() {
         <HomeImg src={phonebookmain} alt="" />
       </HomeImgBox>
       <HomeTextBox>
-        <HomeText>Welcome to the Phonebook app!</HomeText>
+        <HomeText>Welcome to the Phonebook app! In this application you can save your contacts.</HomeText>
       </HomeTextBox>
     </HomeContainer>
   );

@@ -8,7 +8,7 @@ export default function UserMenu() {
   const { user } = useAuth();
   return (
     <UserContainer>
-      <UserText>Hi, {user.name} !</UserText>
+      <UserText>Hi, {user.name}!</UserText>
       <UserText>Email: {user.email}</UserText>
       <UserButton type="button" onClick={() => dispatch(logOut())}>
         Log Out
