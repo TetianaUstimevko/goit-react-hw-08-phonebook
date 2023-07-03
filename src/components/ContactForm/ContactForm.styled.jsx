@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const ContactFormStyle = styled.form`
   max-width: 300px;
-  margin-left: 475px;
+  margin-left: 305px;
   background-color: rgb(173, 223, 219);
   display: flex;
   justify-content: center;

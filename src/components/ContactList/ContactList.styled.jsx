@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
 export const ContactListStyle = styled.ul`
+  max-width: 350px;
+  margin-left: 282px;
   background-color: rgb(173, 223, 219);
   display: flex;
   justify-content: center;

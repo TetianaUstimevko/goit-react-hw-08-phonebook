@@ -2,12 +2,11 @@ import styled from '@emotion/styled';
 
 // export const ContactItemContainer = styled.div`
 //   max-width: 300px;
-//   margin-left: 475px;
-//   display: flex;
+  
 // `;
 
 export const ContactItemList = styled.li`
-  
+ 
   background-color: #fff;
   border: 1px solid #000;
   padding: 10px;
@@ -24,7 +23,7 @@ export const ContactItemList = styled.li`
 
 
 export const ContactItemText = styled.p`
-  
+
   
 `;
 
